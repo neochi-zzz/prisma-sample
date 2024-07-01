@@ -1,15 +1,15 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
 
 async function main() {
     const user = await prisma.user.create({
-        data:{
-            name:'neochi',
-            email:'neochi@gmail.com'
+        data: {
+            name:'shohei-otani',
+            email:'shohei-otani@gmail.com'
         }
     })
-    console.log(user)
+    console.log("created: ", user)
 }
 
 main()
